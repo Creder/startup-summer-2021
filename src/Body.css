@@ -67,6 +67,25 @@ color: #808080;
 
 }
 
+.not-found-icon{
+	height: 165px;
+width: 156px;
+left: 605px;
+top: 284px;
+border-radius: 0px;
+
+position: absolute;
+}
+
+.empty-repo-icon{
+	height: 165px;
+width: 243px;
+left: 200px;
+top: 269px;
+border-radius: 0px;
+position: absolute;
+}
+
 .start-icon{
 	height: 196px;
 width: 210px;

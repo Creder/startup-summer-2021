@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import notFound from './icon/not_found_icon.png'
 import './Body.css'
 
 export default class UserNotFoundComponent extends Component {
@@ -8,9 +9,9 @@ export default class UserNotFoundComponent extends Component {
 	
 	render(){
 
-	return (<div className="Body">
-					<p>User not found :c</p>
-			</div>
+	return (<React.Fragment>
+					<img src={notFound} className = "not-found-icon"/>
+			</React.Fragment>
 		);
 	}
 }

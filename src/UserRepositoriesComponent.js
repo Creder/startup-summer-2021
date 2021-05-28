@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import emptyRepo from './icon/empty_repository.png'
 import './Body.css'
 import ReactPaginate from 'react-paginate';
 
@@ -102,7 +103,7 @@ export default class UserRepositoriesComponent extends Component {
 			</React.Fragment>
 		}
 		else
-			repoList = <p>No repos</p>
+			repoList = <img src={emptyRepo} className = "empty-repo-icon"/>
 		return <div className = "repo-list">
 			{repoList}
 		</div>
