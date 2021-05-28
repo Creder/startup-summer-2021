@@ -1,0 +1,126 @@
+.Head{
+	height: 72px;
+width: 1366px;
+left: 0px;
+top: 0px;
+border-radius: 0px;
+
+
+
+
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #0064EB;
+}
+
+.Frame {
+	height: 40px;
+width: 41.0186767578125px;
+left: 41px;
+top: 16px;
+border-radius: 0px;
+
+position: absolute;
+width: 41.02px;
+height: 40px;
+left: 41px;
+top: 16px;
+}
+
+.DivDer {
+	position: absolute;
+left: 0%;
+right: 0%;
+top: 100%;
+bottom: 0%;
+
+/* Gray */
+
+border: 1px solid #D4D8DD;
+}
+
+.Rectangle {
+height: 40px;
+width: 500px;
+left: 0px;
+top: 0px;
+border-radius: 6px;
+
+margin-top: 16px;
+margin-left: 104px;
+
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* White */
+
+background: #FFFFFF;
+border-radius: 6px;
+}
+
+.Icon {
+	position: static;
+width: 24px;
+height: 24px;
+left: 0px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 6px;
+
+}
+
+.SearhForm {
+	position: static;
+height: 24px;
+left: 16.67%;
+right: -58.89%;
+top: calc(50% - 24px/2);
+
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 17px;
+display: flex;
+align-items: center;
+letter-spacing: 0.01em;
+
+/* Gray Dark */
+
+color: #808080;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+margin: 0px 6px;
+}
+
+.IconTextGroup {
+	display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: absolute;
+width: 180px;
+height: 24px;
+left: 14px;
+top: 8px;
+}

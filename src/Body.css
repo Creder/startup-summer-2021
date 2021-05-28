@@ -1,0 +1,230 @@
+.content{
+	position: relative;
+width: 1366px;
+height: 700px;
+
+/* Gray Light */
+
+background: #F9F9F9;
+}
+
+.pagination {
+  margin: 15px auto;
+  display: flex;
+  list-style: none;
+  outline: none;
+}
+.pagination > .active > a{
+  background-color: #47ccde ;
+  border-color: #47ccde ;
+  color: #fff;
+}
+.pagination > li > a{
+  border: 1px solid #47ccde ;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+  background-color: #47ccde ;
+  border-color: #47ccde;
+  outline: none ;
+}
+.pagination > li > a, .pagination > li > span{
+  color: #47ccde
+}
+.pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span{
+  border-radius: unset
+}
+
+
+
+.SearchForm {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  outline: none;
+}
+
+.SearchIcon{
+
+height: 64.16667938232422px;
+width: 64.16752624511719px;
+left: 22.916748046875px;
+top: 22.916748046875px;
+border-radius: 0px;
+
+
+left: 20.83%;
+right: 20.83%;
+top: 20.83%;
+bottom: 20.83%;
+
+/* Gray Dark */
+
+color: #808080;
+
+}
+
+.start-icon{
+	height: 196px;
+width: 210px;
+left: 578px;
+top: 269px;
+border-radius: 0px;
+
+position: absolute;
+}
+
+.user-image{
+	height: 280px;
+	width: 280px;
+	left: 57px;
+	top: 111px;
+	border-radius: 50%;
+
+}
+
+.user-info{
+	height: 500.9819641113281px;
+width: 292.0830078125px;
+left: 56px;
+top: 112px;
+border-radius: 0px;
+
+position: absolute;
+}
+
+.user-name{
+	height: 34px;
+width: 200px;
+left: 56.031982421875px;
+top: 420px;
+border-radius: nullpx;
+
+font-family: Inter;
+font-size: 26px;
+font-style: normal;
+font-weight: 600;
+line-height: 34px;
+letter-spacing: 0px;
+text-align: left;
+
+}
+
+.user-login{
+	height: 28.738739013671875px;
+width: 80.5251235961914px;
+left: 56.031982421875px;
+top: 466px;
+border-radius: nullpx;
+
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: 0px;
+text-align: left;
+
+}
+
+
+
+.social{
+	height: 24.24322509765625px;
+width: 300.0830078125px;
+left: 56px;
+top: 519.73876953125px;
+border-radius: 0px;
+
+}
+
+.group{
+
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+
+.person{
+
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+
+
+}
+
+.repo-list{
+	position: absolute;
+	left: 433px;
+}
+
+.repo-title{
+
+	font-family: Inter;
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: 42px;
+letter-spacing: 0px;
+text-align: left;
+
+}
+
+.repo-name{
+	height: 29px;
+width: 191px;
+left: 32px;
+top: 24px;
+border-radius: nullpx;
+
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 29px;
+letter-spacing: 0px;
+text-align: left;
+
+
+}
+
+.repo-info{
+	height: 112px;
+width: 877px;
+left: 433px;
+top: 579px;
+border-radius: 6px;
+padding: 24px, 32px, 24px, 32px;
+
+}
+
+.repo-description{
+	height: 19px;
+width: 586px;
+left: 32px;
+top: 69px;
+border-radius: nullpx;
+
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 19px;
+letter-spacing: 0px;
+text-align: left;
+
+}
+
