@@ -52,7 +52,7 @@ export default class BodyComponent extends Component {
 
 	afterSubmission = (event) => {
     event.preventDefault();
-    if(this.state.username != ""){
+    if(this.state.username !== ""){
     	this.searchUser();
     }
     	this.setState({	username: ''})
@@ -68,12 +68,12 @@ export default class BodyComponent extends Component {
 		if(this.state.user == null){
 				currentPage = <React.Fragment><UserNotFoundComponent/></React.Fragment>;
 		}
-		else if(Object.keys(this.state.user).length != 0 && this.state.user.login != ''){
+		else if(Object.keys(this.state.user).length !== 0 && this.state.user.login !==''){
 			currentPage =  <React.Fragment><UserDataComponent user={this.state.user}/><UserRepositories user ={this.state.user} /></React.Fragment>;
 
 		}
-		else if(Object.keys(this.state.user).length == 0){
-			currentPage = <React.Fragment><img src={startIcon} className="start-icon"/></React.Fragment>;
+		else if(Object.keys(this.state.user).length === 0){
+			currentPage = <React.Fragment><img src={startIcon} className="start-icon" alt="start-icon"/></React.Fragment>;
 		}
 
 	return (

@@ -67,7 +67,7 @@ export default class UserRepositoriesComponent extends Component {
 	}
 
 	componentDidUpdate(prevProps, prevState){
-		if(prevProps.user != this.props.user){
+		if(prevProps.user !== this.props.user){
 			this.searchRepos()
 			this.setState({
 				pageCount: 0,
@@ -75,7 +75,7 @@ export default class UserRepositoriesComponent extends Component {
 			})
 			
 		}
-		if(prevState.repos != this.state.repos){
+		if(prevState.repos !== this.state.repos){
 			this.listRepos()
 		}
 	}
@@ -83,7 +83,7 @@ export default class UserRepositoriesComponent extends Component {
 	render(){
 
 		let repoList;
-		if(Object.keys(this.state.data).length != 0){
+		if(Object.keys(this.state.data).length !== 0){
 			repoList = <React.Fragment>
 				<p className="repo-title"> Repostiories ({this.state.repos.length})</p>
 
