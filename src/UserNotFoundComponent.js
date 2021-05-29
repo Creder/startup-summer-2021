@@ -10,7 +10,7 @@ export default class UserNotFoundComponent extends Component {
 	render(){
 
 	return (<React.Fragment>
-					<img src={notFound} className = "not-found-icon"/>
+					<img src={notFound} className = "not-found-icon" alt="not-found"/>
 			</React.Fragment>
 		);
 	}

@@ -10,7 +10,6 @@ export default class UserDataComponent extends Component {
 				<div className="user-info">
 							<img src={user.avatar_url} className = "user-image" alt="user"/>
 							<p className="user-name">{user.name}</p>
-							<p>{user.login}</p>
 							<a href="#" onClick={() => window.open(user.html_url , '_blank')} className="user-login">{user.login}</a>
 							<div className="social">
 								<div className="group">
@@ -21,7 +20,6 @@ export default class UserDataComponent extends Component {
 									<img src={personIcon}  alt="person-icon"/>
 									<p className="following">{user.following} following</p>
 								</div>
-								
 								
 							</div>
 					</div>

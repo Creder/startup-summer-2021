@@ -85,27 +85,28 @@ export default class UserRepositoriesComponent extends Component {
 		let repoList;
 		if(Object.keys(this.state.data).length !== 0){
 			repoList = <React.Fragment>
-				<p className="repo-title"> Repostiories ({this.state.repos.length})</p>
-
-				{this.state.data}
+			<p className="repo-list-title"> Repostiories ({this.state.repos.length})</p>
+				<div className="pagination">{this.state.data}
+			{this.state.offset+1}-{this.state.offset+this.state.perPage} of {this.state.repos.length} items
 			<ReactPaginate
-                    previousLabel={"prev"}
-                    nextLabel={"next"}
+                    previousLabel={"<"}
+                    nextLabel={">"}
                     breakLabel={"..."}
                     breakClassName={"break-me"}
                     pageCount={this.state.pageCount}
                     marginPagesDisplayed={2}
                     pageRangeDisplayed={5}
                     onPageChange={this.handlePageClick}
-                    containerClassName={"pagination"}
                     subContainerClassName={"pages pagination"}
                     activeClassName={"active"}/>
+                    </div>
 			</React.Fragment>
 		}
 		else
-			repoList = <img src={emptyRepo} className = "empty-repo-icon"/>
-		return <div className = "repo-list">
-			{repoList}
-		</div>
+			repoList = <img src={emptyRepo} className ="empty-repo-icon" alt="no-repos"/>
+		return <React.Fragment>
+				<div className = "repo-list">
+					{repoList}
+				</div></React.Fragment>
 	}
 }

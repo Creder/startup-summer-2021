@@ -78,7 +78,7 @@ export default class BodyComponent extends Component {
 
 	return (
 		
-			<div>
+			<React.Fragment>
 				<header className="Head">
 					<img src={vector} className="Frame" alt="vector"/>
 					<div className ="Rectangle">
@@ -93,7 +93,7 @@ export default class BodyComponent extends Component {
 				<div className="content">
 				{currentPage}
 				</div>
-			</div>
+			</React.Fragment>
 		);
 	}
 }

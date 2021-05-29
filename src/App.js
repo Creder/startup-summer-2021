@@ -1,9 +1,9 @@
 import React from "react";
 import Body from './BodyComponent';
 function App() {
-  return (	<div>
+  return (	<React.Fragment>
   				<Body/>
-         	</div>
+         	</React.Fragment>
   );
 }
 

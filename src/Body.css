@@ -1,43 +1,72 @@
 .content{
-	position: relative;
-width: 1366px;
-height: 700px;
+	 font-family: sans-serif;
 
-/* Gray Light */
-
-background: #F9F9F9;
+	width: 1366px;
+	height: 700px;
+	display: grid;
+	background: #F9F9F9;
 }
+
 
 .pagination {
-  margin: 15px auto;
-  display: flex;
-  list-style: none;
-  outline: none;
-}
-.pagination > .active > a{
-  background-color: #47ccde ;
-  border-color: #47ccde ;
-  color: #fff;
-}
-.pagination > li > a{
-  border: 1px solid #47ccde ;
-  padding: 5px 10px;
-  outline: none;
+  display: inline-block;
+  list-style-type: none;
   cursor: pointer;
+ 
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 21px;
+	letter-spacing: 0em;
+	text-align: left;
+
 }
-.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
-  background-color: #47ccde ;
-  border-color: #47ccde;
-  outline: none ;
-}
-.pagination > li > a, .pagination > li > span{
-  color: #47ccde
-}
-.pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span{
-  border-radius: unset
+.pagination li {
+	margin-left: 5px;
+	display: flex;
+	flex-direction: column;
+	float: left;
 }
 
+.pagination li {
+	padding: 2px 6px;
+	width: 21px;
+	height: 25px;
+	left: 190px;
+	top: 0px;
+  color: black;
+  
+  text-decoration: none;
+  
 
+  
+}
+ 
+.pagination li a{
+text-align: center;
+color: #808080;
+}
+
+.pagination li:hover:not(.active) a{
+	transition: color .5s;
+	color: #0064EB;
+}
+
+.pagination li.active  a{
+	
+  background-color: #0064EB;
+  color: white;
+  border-radius: 3px;
+}
+
+.pagination li.previous, .pagination li.next {
+  cursor: pointer;
+  color: #808080;
+}
+
+.pagination li.previous.disabled, .pagination li.next.disabled{
+  color: white;
+}
 
 .SearchForm {
   border-top-style: hidden;
@@ -61,8 +90,6 @@ right: 20.83%;
 top: 20.83%;
 bottom: 20.83%;
 
-/* Gray Dark */
-
 color: #808080;
 
 }
@@ -73,7 +100,6 @@ width: 156px;
 left: 605px;
 top: 284px;
 border-radius: 0px;
-
 position: absolute;
 }
 
@@ -83,7 +109,6 @@ width: 243px;
 left: 200px;
 top: 269px;
 border-radius: 0px;
-position: absolute;
 }
 
 .start-icon{
@@ -106,23 +131,14 @@ position: absolute;
 }
 
 .user-info{
-	height: 500.9819641113281px;
-width: 292.0830078125px;
-left: 56px;
-top: 112px;
-border-radius: 0px;
+	 margin-left: 57px;
+    margin-top: 111px;
+    width: 300px; 
 
-position: absolute;
 }
 
 .user-name{
-	height: 34px;
-width: 200px;
-left: 56.031982421875px;
-top: 420px;
-border-radius: nullpx;
 
-font-family: Inter;
 font-size: 26px;
 font-style: normal;
 font-weight: 600;
@@ -137,32 +153,27 @@ text-align: left;
 width: 80.5251235961914px;
 left: 56.031982421875px;
 top: 466px;
-border-radius: nullpx;
 
-font-family: Inter;
 font-size: 18px;
 font-style: normal;
 font-weight: 400;
 line-height: 22px;
 letter-spacing: 0px;
 text-align: left;
+text-decoration-line: blink;
 
 }
 
 
 
 .social{
-	height: 24.24322509765625px;
-width: 300.0830078125px;
-left: 56px;
-top: 519.73876953125px;
-border-radius: 0px;
-
+	margin-top: 25px;
+flex-direction: row;
+display: flex;
 }
 
 .group{
 
-font-family: Inter;
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
@@ -173,8 +184,7 @@ text-align: left;
 }
 
 .person{
-
-font-family: Inter;
+margin-left: 16px;
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
@@ -184,15 +194,16 @@ text-align: left;
 
 
 }
-
 .repo-list{
-	position: absolute;
-	left: 433px;
+	grid-column-start: 2;
+	margin-left: 96px;
+grid-row-start: 1; 
+
 }
 
-.repo-title{
-
-	font-family: Inter;
+.repo-list-title{
+grid-column-start: 2;
+grid-row-start: 1; 
 font-size: 32px;
 font-style: normal;
 font-weight: 600;
@@ -207,16 +218,14 @@ text-align: left;
 width: 191px;
 left: 32px;
 top: 24px;
-border-radius: nullpx;
 
-font-family: Inter;
 font-size: 24px;
 font-style: normal;
 font-weight: 500;
 line-height: 29px;
 letter-spacing: 0px;
 text-align: left;
-
+text-decoration-line: blink;
 
 }
 
@@ -235,9 +244,7 @@ padding: 24px, 32px, 24px, 32px;
 width: 586px;
 left: 32px;
 top: 69px;
-border-radius: nullpx;
 
-font-family: Inter;
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
