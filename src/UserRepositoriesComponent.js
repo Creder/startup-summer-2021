@@ -11,7 +11,7 @@ export default class UserRepositoriesComponent extends Component {
       		offset: 0,
       		repos: [],
      		data: [],
-     		perPage: 5,
+     		perPage: 4,
       		currentPage: 0,
 			pending: []
 		};
