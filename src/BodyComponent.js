@@ -14,8 +14,8 @@ export default class BodyComponent extends Component {
 		this.state = {
 			username:'',
 			user:{},
-			repos: [
-			 ]
+			repos: [],
+			rendering: false
 			
 		}
 		this.afterSubmission = this.afterSubmission.bind(this);
@@ -45,13 +45,21 @@ export default class BodyComponent extends Component {
 			});
 				
 	}
-
+	shouldComponentUpdate(){
+		if(this.state.rendering){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
 	
 
 
 
 	afterSubmission = (event) => {
     event.preventDefault();
+	this.setState({rendering: true})
     if(this.state.username !== ""){
     	this.searchUser();
     }
@@ -75,6 +83,7 @@ export default class BodyComponent extends Component {
 		else if(Object.keys(this.state.user).length === 0){
 			currentPage = <React.Fragment><img src={startIcon} className="start-icon" alt="start-icon"/></React.Fragment>;
 		}
+		this.setState({rendering: false})
 
 	return (
 		

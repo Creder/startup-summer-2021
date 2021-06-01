@@ -12,7 +12,8 @@ export default class UserRepositoriesComponent extends Component {
       		repos: [],
      		data: [],
      		perPage: 5,
-      		currentPage: 0
+      		currentPage: 0,
+			pending: []
 		};
 		 this.handlePageClick = this
             .handlePageClick
@@ -48,7 +49,9 @@ export default class UserRepositoriesComponent extends Component {
 
     searchRepos = () =>{
 		let username = this.props.user.login;
-		fetch('https://api.github.com/users/'+ username+'/repos').then((response) => {
+		fetch('https://api.github.com/users/'+ username+'/repos?per_page=100').then((response) => {
+			this.setState({pending: response});
+			
 			if(response.status === 200){
 				return response.json();
 			}
@@ -72,38 +75,48 @@ export default class UserRepositoriesComponent extends Component {
 			this.setState({
 				pageCount: 0,
       			offset: 0,
+				pending: [],
+				repos: [],
+				data: []
 			})
-			
 		}
 		if(prevState.repos !== this.state.repos){
-			this.listRepos()
+			this.listRepos();
 		}
 	}
 	
 	render(){
-
 		let repoList;
-		if(Object.keys(this.state.data).length !== 0){
-			repoList = <React.Fragment>
-			<p className="repo-list-title"> Repostiories ({this.state.repos.length})</p>
+		if(this.state.pending.length !== 0){
+
+			if(Object.keys(this.state.data).length !== 0){
+				repoList = <React.Fragment>
+				<div className="repo-list-title"><p> Repostiories ({this.state.repos.length})</p></div>
 				<div className="pagination">{this.state.data}
-			{this.state.offset+1}-{this.state.offset+this.state.perPage} of {this.state.repos.length} items
-			<ReactPaginate
-                    previousLabel={"<"}
-                    nextLabel={">"}
-                    breakLabel={"..."}
-                    breakClassName={"break-me"}
-                    pageCount={this.state.pageCount}
-                    marginPagesDisplayed={2}
-                    pageRangeDisplayed={5}
-                    onPageChange={this.handlePageClick}
-                    subContainerClassName={"pages pagination"}
-                    activeClassName={"active"}/>
-                    </div>
-			</React.Fragment>
+				{this.state.offset+1}-{this.state.offset+this.state.perPage} of {this.state.repos.length} items
+				<ReactPaginate
+						previousLabel={"<"}
+						nextLabel={">"}
+						breakLabel={"..."}
+						breakClassName={"break-me"}
+						pageCount={this.state.pageCount}
+						marginPagesDisplayed={2}
+						pageRangeDisplayed={5}
+						onPageChange={this.handlePageClick}
+						subContainerClassName={"pages pagination"}
+						activeClassName={"active"}/>
+						</div>
+				</React.Fragment>
+			}
+			else{
+				repoList = <React.Fragment><img src={emptyRepo} className ="empty-repo-icon" alt="no-repos"/></React.Fragment>
+			}
 		}
-		else
-			repoList = <img src={emptyRepo} className ="empty-repo-icon" alt="no-repos"/>
+		else{
+			repoList = <div className="loader"></div>
+		}
+		
+			
 		return <React.Fragment>
 				<div className = "repo-list">
 					{repoList}

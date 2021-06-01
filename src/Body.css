@@ -1,9 +1,10 @@
 .content{
-	 font-family: sans-serif;
-
-	width: 1366px;
-	height: 700px;
-	display: grid;
+	font-family: sans-serif;
+    position: relative;
+    width: 1366px;
+    height: 700px;
+    display: grid;
+    grid-template-columns: 30% auto;
 	background: #F9F9F9;
 }
 
@@ -12,7 +13,7 @@
   display: inline-block;
   list-style-type: none;
   cursor: pointer;
- 
+  margin-left: 25px;
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
@@ -105,10 +106,19 @@ position: absolute;
 
 .empty-repo-icon{
 	height: 165px;
-width: 243px;
-left: 200px;
-top: 269px;
-border-radius: 0px;
+    width: 243px;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+
+}
+
+.loader{
+	height: 165px;
+    width: 243px;
+    position: absolute;
+    top: 25%;
+    left: 10%;
 }
 
 .start-icon{
@@ -131,10 +141,10 @@ position: absolute;
 }
 
 .user-info{
-	 margin-left: 57px;
+	left: 5%;
+    grid-column-start: 1;
     margin-top: 111px;
-    width: 300px; 
-
+    position: absolute;
 }
 
 .user-name{
@@ -195,14 +205,15 @@ text-align: left;
 
 }
 .repo-list{
-	grid-column-start: 2;
-	margin-left: 96px;
-grid-row-start: 1; 
+	position: relative;
+    grid-column-start: 2;
+    left: 96px;
+    display: grid;
+    grid-template-rows: auto auto;
 
 }
 
 .repo-list-title{
-grid-column-start: 2;
 grid-row-start: 1; 
 font-size: 32px;
 font-style: normal;
@@ -253,4 +264,18 @@ letter-spacing: 0px;
 text-align: left;
 
 }
+
+.loader {
+	border: 16px solid #f3f3f3; /* Light grey */
+	border-top: 16px solid #3498db; /* Blue */
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+  }
 
